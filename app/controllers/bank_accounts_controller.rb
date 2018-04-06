@@ -51,7 +51,7 @@ class BankAccountsController < ApplicationController
       @bank_account = current_user.bank_accounts.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Only allow a trusted parameter through.
     def bank_account_params
       params.require(:bank_account).permit(:title, :institution, :amount, :description, :active)
     end

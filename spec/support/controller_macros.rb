@@ -2,14 +2,7 @@ module ControllerMacros
   def login_user
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:user]
-      @user = User.create(
-        email: 'test@test.com',
-        password: 'password',
-        first_name: 'Testy',
-        last_name: 'Testerson',
-        age: 27,
-        gender: 'Female'
-      )
+      @user = User.create(email: 'test@test.com', password: 'password', first_name: 'Test', last_name: 'Tester', age: 27, gender: 'Male')
       sign_in @user
     end
   end

@@ -14,14 +14,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 
 group :development, :test do
-gem 'pry'
+  gem 'pry'
   # RSpec Gem - Test Suite Runner
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :test do
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'database_cleaner'
+  # REMEMBER: to add the coverage/ folder to your .gitignore - also wouldn't be a bad idea to add the .DS_Store file as well
   gem 'simplecov'
 end
 
