@@ -15,4 +15,5 @@ class BankAccount < ApplicationRecord
         self.ledger << { legder_change: Time.now, previous_amount: self.changes[:amount].first, new_amount: self.amount }
       end
     end
+
 end
